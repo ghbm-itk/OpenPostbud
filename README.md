@@ -34,10 +34,12 @@ It does so by calling the Libre Office executable in the command line.
 To run OpenPostbud needs the following environment variables set:
 
 | Name                    | description                                         | Type                    |
-| ----------------------- | --------------------------------------------------- | ----------------------- |
+|-------------------------|-----------------------------------------------------| ----------------------- |
 | nicegui_storage_secret  | The secret used to store user session tokens        | String                  |
 | database_storage_secret | The encryption key used to encrypt database columns | A valid 128-bit AES key |
-| auth_lifetime_seconds   | The number of seconds to keep a user logged in      | Integer                 |
+| ui_port                 | Port the application listens on                     | Integer                 |
+| ui_host                 | Host IP to listen on                                | Integer                 |
+| ui_reload               | Reload application when changes are detected        | Integer                 |
 
 ### Workers
 
