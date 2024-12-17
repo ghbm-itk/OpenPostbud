@@ -15,7 +15,7 @@ def main():
     connection.create_tables()
     app.add_middleware(AuthMiddleware)
     app.add_middleware(AuditMiddleware)
-    ui.run(storage_secret=os.environ["nicegui_storage_secret"], title="OpenPostbud", favicon="📯")
+    ui.run(storage_secret=os.environ["nicegui_storage_secret"], title="OpenPostbud", favicon="📯", host=os.environ["ui_host"], port=os.environ["ui_port"], reload=os.environ["ui_reload"])
 
 
 if __name__ in {'__main__', '__mp_main__'}:
