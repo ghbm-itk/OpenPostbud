@@ -45,8 +45,8 @@ class OverviewPage():
         table.on("rowClick", self.row_click)
 
     def row_click(self, event):
-        row = event.args[1]
-        ui.navigate.to(f"/forsendelser/{row["id"]}")
+        id = event.args[1]['id']
+        ui.navigate.to(f"/forsendelser/{id}")
 
 
 class DetailPage():
